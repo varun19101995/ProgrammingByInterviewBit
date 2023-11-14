@@ -1,0 +1,29 @@
+# import java.util.*;
+public class Solution {
+    public String findDigitsInBinary(int A) {
+        StringBuilder count=new StringBuilder();
+       // String count="";
+        if(A==1)
+        {
+            return "1";
+        }
+        if(A==0)
+        {
+            return "0";
+        }
+        while(A>0)
+        {
+            if(A%2!=0)
+            {
+                count=count.append("1");
+            }
+            if(A%2==0)
+            {
+                count=count.append("0");
+            }
+            A=A/2;
+        }
+        return count.reverse().toString();
+    }
+    
+}
